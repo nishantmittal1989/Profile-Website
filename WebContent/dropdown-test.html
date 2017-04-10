@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+.dropdown-icon ul {
+    *zoom:1;
+    margin:0;
+    padding:0;
+    list-style-type: none;
+    text-decoration: none;
+}
+.dropdown-icon ul:before,.dropdown-icon ul:after {
+    content:""; 
+    display:table;
+    text-decoration: none;
+}
+.dropdown-icon ul:after {
+    clear:both;
+}
+.dropdown-icon ul > li {
+    float:left;
+    position:relative;
+}
+.dropdown-icon a {
+    display:block;
+    /* line-height:1.2em; */
+}
+
+.dropdown-icon a:hover {
+    /* text-decoration:none; */
+}
+
+.dropdown-icon li ul {
+    
+}
+.dropdown-icon li ul li {
+    
+    
+}
+.dropdown-icon li ul a {
+    border:none;
+}
+.dropdown-icon li ul a:hover {
+    /* background:rgba(0,0,0,0.2); */
+}
+
+.dropdown-icon li ul {
+    position:absolute;
+    left:0;
+    top:36px;
+   /*  z-index:1; */
+}
+.dropdown-icon li ul li {
+    overflow:hidden;
+    max-height:0;
+    -webkit-transition:max-height 500ms ease;
+    -moz-transition:max-height 500ms ease;
+    -o-transition:max-height 500ms ease;
+    transition:max-height 500ms ease;
+}
+.dropdown-icon ul > li:hover ul li {
+    /* padding:2px; */
+     max-height:100px; 
+}
+
+#connect {
+	height: 42px;
+	width: 42px;
+	background: url('img/dot.png');
+	background-size: cover;
+	
+}
+
+#gmail, #facebook, #twitter{
+    margin-top:5px;
+	height: 42px;
+	width: 42px;
+}
+
+#gmail {
+    margin-top:10px;
+	background: url('img/gmail_circle.png');
+	background-size: cover;
+}
+
+#facebook {
+	background: url('img/facebook_circle.png');
+	background-size: cover;
+}
+
+#twitter {
+	background: url('img/twitter_circle.png');
+	background-size: cover;
+}
+
+#gmail:hover {
+	background-image: url('img/gmail.png');
+}
+
+#facebook:hover {
+	background-image: url('img/facebook.png');
+}
+
+#twitter:hover {
+	background-image: url('img/twitter.png');
+}
+
+</style>
+</head>
+<body>
+<nav class="dropdown-icon">
+    <ul>
+        <li>
+             <a id="connect" href="#"></a>
+            <ul>
+             	<li><a id="gmail" href="#"></a></li>
+                <li><a id="facebook" href="#"></a></li>
+                <li><a id="twitter" href="#"></a></li> 
+            </ul>
+        </li>
+    </ul>
+</nav>
+</body>
+</html>

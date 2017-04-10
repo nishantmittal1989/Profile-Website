@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+ul {
+  
+}
+
+#connect {
+	position: absolute;
+	height: 42px;
+	width: 42px;
+	background: url('img/connect.png');
+	background-size: cover;
+	
+}
+
+#gmail {
+	position: absolute;
+	height: 42px;
+	width: 42px;
+	background: url('img/gmail_circle.png');
+	background-size: cover;
+}
+
+#facebook {
+	position: absolute;
+	height: 42px;
+	width: 42px;
+	background: url('img/facebook_circle.png');
+	background-size: cover;
+}
+
+#twitter {
+	position: absolute;
+	height: 42px;
+	width: 42px;
+	background: url('img/twitter_circle.png');
+	background-size: cover;
+}
+
+.drop-icon ul{
+list-style-type: none;
+}
+
+.drop-icon li ul {
+    position:absolute;
+    left:0;
+    top:36px;
+    z-index:1;
+}
+.drop-icon li ul li {
+    height:0;
+    -webkit-transition:height 200ms ease-in;
+    -moz-transition:height 200ms ease-in;
+    -o-transition:height 200ms ease-in;
+    transition:height 200ms ease-in;
+    position:relative;
+    display: none;
+}
+.drop-icon ul > li:hover ul li {
+    display: list-item;
+    height:46px;
+}
+
+</style>
+</head>
+<body>
+
+<nav class="drop-icon">
+    <ul>
+        <li>
+            <a id="connect" href="#"></a>
+            <ul>
+                <li><a id="gmail" href="#"></a></li>
+                <li><a id="facebook" href="#"></a></li>
+                <li><a id="twitter" href="#"></a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+</body>
+</html>

@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nishant Mittal</title>
+<link rel="stylesheet" href="css/test.css">
+<link rel='stylesheet' href='unitegallery/css/unite-gallery.css'
+	type='text/css' />
+<link
+	href='https://fonts.googleapis.com/css?family=Playfair+Display:700,900|Fira+Sans:400,400italic'
+	rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/style.css">
+<!-- Resource style -->
+<script src="js/modernizr.js"></script>
+<!-- Modernizr -->
+<script type='text/javascript' src='unitegallery/js/jquery-11.0.min.js'></script>
+<script type='text/javascript' src='unitegallery/js/unitegallery.min.js'></script>
+<script type='text/javascript'
+	src='unitegallery/themes/tiles/ug-theme-tiles.js'></script>
+<script>
+	var degree = '0deg';
+	function flip() {
+		window.setInterval(flipTime, 6000);
+	}
+
+	function flipTime() {
+		if (degree == '0deg') {
+			degree = '180deg';
+			$('.rotate').css('transform', 'rotateY(' + degree + ')');
+			$('.rotate').css('transition', '1.0s');
+			$('.rotate').css('transform-style', 'preserve-3d');
+		} else {
+			degree = '0deg';
+			$('.rotate').css('transform', 'rotateY(' + degree + ')');
+			$('.rotate').css('transition', '1.0s');
+			$('.rotate').css('transform-style', 'preserve-3d');
+		}
+	}
+
+	
+</script>
+<style type="text/css">
+body {
+	min-width: 700px;
+	min-height: 600px;
+}
+
+#wrapper {
+	width: 100%;
+	position: relative;
+	transform: translate3d(0, 0, 0);
+	transition: transform .9s ease-in-out;
+	overflow: visible;
+}
+
+.content {
+	width: 1280px;
+	height: 512px;
+	position: relative;
+}
+
+#contentContainer {
+	top: 117px;
+	width: 1280px;
+	position: absolute;
+	height: 525px;
+	overflow: hidden;
+}
+
+#globe {
+	z-index: -100;
+	position: absolute;
+	right: -100px;
+	bottom: 0px;
+}
+
+#india {
+	z-index: -100;
+	background-image: url('img/robot.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	position: relative;
+	width: 500px;
+	height: 500px;
+	right: -780px;
+	top: 120px;
+}
+
+#resume-page {
+	background-image: url('img/paris.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% 100%;
+	box-shadow: 10px 10px #888888;
+}
+
+#about-me-quote {
+	top: 10px;
+	left: 215px; font-style : italic;
+	font-size: 22px; font-variant : small-caps;
+	position: relative;
+	font-family: Lato, sans-serif;
+	font-variant: small-caps;
+	font-style: italic;
+}
+
+#about-me-content {
+	font-weight: 100;
+	float: left;
+	z-index: 100;
+	display: block;
+	width: 750px;
+	top: 30px;
+	left: 210px;
+	font-size: 16px;
+	position: relative;
+	font-family: Lato, sans-serif;
+	text-align: justify;
+	line-height: 1.5;
+}
+
+.line-shadow {
+	float: left;
+	left: 180px;
+	top: 50px;
+	position: relative;
+	border-left: 2px ridge #ffffff;
+	height: 300px;
+	box-shadow: -1px 0px 15px #888;
+}
+
+#about-style {
+	font-weight: normal;
+}
+
+#company {
+	font-size: 18px;
+	color: red;
+}
+
+#role {
+	font-size: 16px;
+	color: #3a589b;
+}
+
+#time {
+	font-size: 14px;
+	color: #959595;
+}
+
+#location {
+	font-size: 14px;
+	color: #959595;
+}
+
+#description {
+	font-weight: 100;
+	font-size: 14px;
+	s
+}
+
+#company, #role, #time, #location, #description {
+	float: left;
+	z-index: 100;
+	width: 930px;
+	top: 10px;
+	left: 200px;
+	position: relative;
+	font-family: Lato, sans-serif;
+	text-align: justify;
+}
+
+#experience-table {
+	float: left;
+}
+
+#home {
+	margin-top: 0;
+}
+
+#experience-table td {
+	width: 310px;
+	padding: 0 10px 0 10px;
+}
+
+.tooltip {
+	display: none;
+	position: absolute;
+	color: #fff;
+	background: #000;
+	padding: 5px;
+	width: 290px;
+}
+
+#pro:hover #tool {
+	display: block;
+}
+
+#client {
+	font-weight: bold;
+	font-style: italic;
+}
+
+#client-name {
+	color: orange;
+	font-weight: bold;
+}
+
+.timeline-img:hover {
+    opacity: 0.5;
+    filter: alpha(opacity=100); /* For IE8 and earlier */
+}
+
+<!-- start accordian -->
+button.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: #ddd;
+}
+
+div.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+}
+
+div.panel.show {
+    display: block;
+}
+
+#main-accordian{
+position: relative;
+left: 50px;
+width: 33%;
+}
+
+<!--End Accordian-->
+
+</style>
+</head>
+<body onload="flip()">
+
+	<header>
+
+		<div class="rotate" id="circular"></div>
+		<a id=header-profile-name>Nishant Mittal</a>
+
+		<div id="social-icons">
+			<nav role="navigation">
+				<ul>
+					<li><a id="linkedin" href="#"></a></li>
+					<li><a id="gmail" href="#"></a></li>
+					<li><a id="facebook" href="#"></a></li>
+					<li><a id="twitter" href="#"></a></li>
+				</ul>
+			</nav>
+		</div>
+
+		<div id="top-header">
+			<nav role="navigation">
+				<ul>
+					<li><a class="itemLinks" data-pos="0">HOME</a></li>
+					<li><a class="itemLinks" data-pos="-530px">EXPERIENCE</a></li>
+					<li><a class="itemLinks" data-pos="-1050px">GALLERY</a></li>
+					<li><a class="itemLinks" data-pos="-1590px">TIMELINE</a></li>
+					<li><a class="itemLinks" data-pos="-2130px">PROFILE</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<div id="contentContainer">
+		<div id="wrapper">
+
+			<div id="home" class="content">
+				<p>
+					<a id="about-me-quote">"You must be the change you wish to see
+						in the world" - <span style="color: green">Mahatma Gandhi</span>
+					</a>
+				</p>
+				<div class="line-shadow"></div>
+				<p>
+					<a id="about-me-content">The above quote inspires me to learn
+						and polish my skills, to play a small , if not significant, role
+						in making a better tomorrow. Growing up, I have always seen
+						technology shaping the world and giving it an edge.<br>
+					<br> I am a <span id="about-style">Software Engineer</span>
+						and a team leader, working with <span id="about-style">American
+							Express</span>. A part of my work includes developing a unique matching
+						solution, to solve underlinking and overlinking conflicts while
+						comparing commercial records. Prior to this I was employed with <span
+						id="about-style">Infosys limited</span> and have professional
+						experience working for various clients like <span id="about-style">PwC,
+							Cox Communications, T-Mobile.</span> My core competencies include
+						designing RESTFUL Web Services, analytical solutions on Big Data
+						and framing scalable Web Based applications. I have <span
+						id="about-style">5 years of experience</span> in recursive
+						learning and comprehensive research. I also have hands on
+						experience on different <span id="about-style">frameworks</span>
+						like <span id="about-style">Jersey, Springs, Node.js.</span> I'm
+						always excited to learn new languages and I'm comfortable in some
+						<span id="about-style">languages</span> like <span
+						id="about-style">Java, Jquery, Javascript, HTML5, CSS3,
+							Unix.</span><br>
+					<br> I received my <span id="about-style">B.Tech degree
+							in Computer Science</span> from Jaypee University of Engineering and
+						Technology. Major part of my schooling was done from St. Peter's
+						College(Agra). I love what I do and I do what I love.<br>
+					<br> <span style="font-weight: bold; padding-left: 300px">~Nishant
+							Mittal~</span>
+					</a>
+				</p>
+				<img id="globe" src="img/globe.jpg" width="600px" height="400px"></img>
+			</div>
+
+			<div id="experience-page" class="content">
+				<table id="experience-table">
+					<tr id="company">
+						<td><img alt="" width="12px" height="15px"
+							style="margin-right: 6px" src="img/company.jpg">American
+							Express</td>
+						<td><img alt="" width="12px" height="15px"
+							style="margin-right: 6px" src="img/company.jpg">Infosys
+							Limited</td>
+						<td><img alt="" width="12px" height="15px"
+							style="margin-right: 6px" src="img/company.jpg">Infosys
+							Limited</td>
+					</tr>
+					<tr id="role">
+						<td><img alt="" width="12px" height="15px"
+							style="margin-right: 6px" src="img/role.jpg">Engineer - I</td>
+						<td><img alt="" width="12px" height="15px"
+							style="margin-right: 6px" src="img/role.jpg">Senior
+							Software Engineer</td>
+						<td><img alt="" width="12px" height="15px"
+							style="margin-right: 6px" src="img/role.jpg">Software
+							Engineer</td>
+					</tr>
+					<tr id="time">
+						<td><img alt="" width="12px" height="15px"
+							style="margin-right: 6px" src="img/time.jpg">Sept 2015 -
+							Present</td>
+						<td><img alt="" width="12px" height="15px"
+							style="margin-right: 6px" src="img/time.jpg">May 2014 -
+							Sept 2015</td>
+						<td><img alt="" width="12px" height="15px"
+							style="margin-right: 6px" src="img/time.jpg">Aug 2011 - May
+							2014</td>
+					</tr>
+					<tr id="location">
+						<td><img alt="" width="15px" height="15px"
+							style="margin-right: 6px" src="img/pointer.jpg">FL, USA</td>
+						<td><img alt="" width="15px" height="15px"
+							style="margin-right: 6px" src="img/pointer.jpg">GA, USA</td>
+						<td><img alt="" width="15px" height="15px"
+							style="margin-right: 6px" src="img/pointer.jpg">Pune, India</td>
+					</tr>
+					<tr id="description">
+						<td><br>
+						<span id="pro" style="color: green; font-weight: bold;"><a
+								id="info"><img alt="" width="15px" height="15px"
+									style="margin-right: 6px" src="img/Projects.jpg"></a><span
+								id="tool" class="tooltip"><hr>Technology : REST
+									Concepts, Apigee (Proxy Layer)<br>Frameworks : Springs,
+									REST EASY<br>Servers & Env : EPass, Jboss Server<br>Project
+									Duration : 8 months<br>Team Size : 3
+									<hr></span>Project1:</span> Designed the complete Resource framework and
+							developed A2A and B2B Restful API’s based on ICLIC Data Model.
+							ICLIC Api's are proxied through APIGEE(GOOGLE product) used for
+							monitoring and traffic management. Back End services are deployed
+							in epass and uses Springs framework to connect to DB2. Designing
+							Resource Framework helped us in identifying all resources
+							essential to leverage ICLIC data models. Using APIGEE improved
+							the security and traffic management of the api's drastically. <br>
+						<br>
+						<span id="pro" style="color: green; font-weight: bold;"><a
+								id="info"><img alt="" width="15px" height="15px"
+									style="margin-right: 6px" src="img/Projects.jpg"></a><span
+								id="tool" class="tooltip"><hr>Technology : Big Data
+									Concepts, Unix Scripting<br>Frameworks : Spark & Hive<br>Servers
+									& Env : Silver Cluster<br>Project Duration : 6 months<br>Team
+									Size : 2
+									<hr></span>Project2:</span> Implemented BK-Tree algorithm on Silver
+							cluster (Big Data platform) to solve an intricate matching
+							problem. This helped us in reducing the matching time of an input
+							against 10 million records from 3.7 seconds to just 0.6 seconds.
+							The solution is implemented in Core Java using spark framework
+							and Big Data EcoSystem.</td>
+
+
+						<td style="top: 0; position: relative; margin-top: 0;"><br>
+						<span id="pro" style="color: green; font-weight: bold;"><a
+								id="info"><img alt="" width="15px" height="15px"
+									style="margin-right: 6px" src="img/Projects.jpg"></a><span
+								id="tool" class="tooltip"><hr>Technology :
+									Provisioning Concepts, Java, SOAP<br>Frameworks : Springs
+									IOC, IBatis, XSLT, CXF<br>Servers & Env : Tomcat on Unix
+									box<br>Tools : Toad, SoapUI, Putty, WinSCP, Cigwin<br>External
+									Systems : iControl, SmartVue<br>Database : Oracle 11g<br>Project
+									Duration : 1 year<br>Team Size : 4
+									<hr></span>Project:</span> Developed service platforms - Home Security
+							and Business Security for Cox Communications. These Systems are
+							used for provisioning customers who opt for Cox residential and
+							commercial security packages. Systems front end is ICOMS
+							(ordering Management system) to create customer’s account and
+							sends service transactions through to the Provisioning
+							Transaction Manager (PTM). PTM, which is a java standalone
+							application, parses and validates requests and process orders
+							through java work flow engine. Home Security and Business
+							Security today generates $10 million of revenue per year for Cox
+							Communications and is thus a very critical provisioning system.
+							Both the systems enable Cox Communications to be a one stop shop
+							for customers looking for Security, Internet, Cable connections
+							and other services.<br>
+						<br>
+						<span id="client">Client:</span><span id=client-name> Cox
+								Communications</span></td>
+
+
+						<td><br>
+						<span id="pro" style="color: green; font-weight: bold;"><a
+								id="info"><img alt="" width="15px" height="15px"
+									style="margin-right: 6px" src="img/Projects.jpg"></a><span
+								id="tool" class="tooltip"><hr>Technology : iOS, Java<br>Frameworks
+									: JAXB, Apache Axis 2, Jackson <br>Servers & Env :
+									WebSphere<br>External Systems : Cisco, Lotus Notes<br>Database
+									: SQL server 2008 R2
+									<hr></span>Project1:</span> Developed a mobile app which allow users to
+							create “Out Of Office” request. Users can receive official calls
+							on his/her personal number using cisco call forwarding. Users can
+							also format an OutOfOffice message which will be auto sent to
+							whom so ever is trying to contact the User. <br>
+						<br> <span id="pro" style="color: green; font-weight: bold;"><a
+								id="info"><img alt="" width="15px" height="15px"
+									style="margin-right: 6px" src="img/Projects.jpg"></a><span
+								id="tool" class="tooltip"><hr>Technology : iOS, Java<br>Frameworks
+									: Jersey ,JDBC, XML Parsers, log4j<br>Servers & Env :
+									WebSphere<br>Tools : Fortify, Eclipse<br>Database :
+									SQL server 2008 R2
+									<hr></span>Project2:</span> Designed an iOS native app to locate PwC
+							offices around the globe. Application provides driving
+							directions, office details, and shows the location of office on
+							Google maps. <!-- We also developed a console utility to load run time data to the app's database and the business layer which return the Geo coordinates in JSON format. -->
+
+							<br>
+						<br>
+						<span id="pro" style="color: green; font-weight: bold;"><a
+								id="info"><img alt="" width="15px" height="15px"
+									style="margin-right: 6px" src="img/Projects.jpg"></a><span
+								id="tool" class="tooltip"><hr>Technology : iOS, Java<br>Frameworks
+									: SAP JCO, L-Dap, log4j<br>Servers & Env : WebSphere<br>External
+									Systems : SAP, Enterprise Directory<br>Database : SQL
+									server 2008 R2
+									<hr></span>Project3:</span> Developed Enterprise mobile application for
+							filling work hours for PwC employees. Application used SAP
+							systems as back end. App will sync with different devices and
+							used color codes to show sync errors, for a successful sync or
+							when sync is in process.<br>
+						<br>
+						<span id="client">Client:</span><span id=client-name>
+								PricewaterhouseCoopers</span></td>
+					</tr>
+				</table>
+				<div id="india"></div>
+			</div>
+			<div id="tiles-page" class="content">
+
+				<h4 id="gallery-style">These are few of my achievements and
+					accolades which makes me passionate to grow in technology</h4>
+
+				<div id="gallery" style="display: none;">
+					<a href="#"> <img alt="Amex Hackathon"
+						src="images/thumbs/Amex_hack2.jpg"
+						data-image="images/big/Amex_hack2.jpg"
+						data-description="Won 3rd prize in American Express Hackathon"
+						style="display: none">
+					</a><a href="#"> <img alt="Amex Hackathon"
+						src="images/thumbs/Amex_hack.jpg"
+						data-image="images/big/Amex_hack.jpg"
+						data-description="Won 3rd prize in American Express Hackathon"
+						style="display: none">
+					</a><a href="#"> <img alt="participated in conference"
+						src="images/thumbs/conference.jpg"
+						data-image="images/big/conference.jpg"
+						data-description="Participated in Conference"
+						style="display: none">
+					</a><a href="#"> <img alt="hcl cert"
+						src="images/thumbs/hcl.jpg"
+						data-image="images/big/hcl.jpg"
+						data-description="Training certification at HCL for Networking"
+						style="display: none">
+					</a><a href="#"> <img alt="Mobility Infy"
+						src="images/thumbs/infy_appreciation.jpg"
+						data-image="images/big/infy_appreciation.jpg"
+						data-description="Developed and Support Mobile Warranty for PwC"
+						style="display: none">
+					</a><a href="#"> <img alt="IBM WebService Certification"
+						src="images/thumbs/ibm.jpg" data-image="images/big/ibm.jpg"
+						data-description="Did IBM Certification" style="display: none">
+					</a><a href="#"> <img alt="Infy Hackathon"
+						src="images/thumbs/infy_hack.jpg"
+						data-image="images/big/infy_hack.jpg"
+						data-description="Won 1st Prize in Infy Hackathon"
+						style="display: none">
+					</a><a href="#"> <img alt="Infy Internship"
+						src="images/thumbs/infy_internship.jpg"
+						data-image="images/big/infy_internship.jpg"
+						data-description="Developed Mobile Application in Infy Internship"
+						style="display: none">
+					</a><a href="#"> <img alt="Team Falcons"
+						src="images/thumbs/Falcons.jpg"
+						data-image="images/big/Falcons.jpg"
+						data-description="With my Team Falcons at Infy Hackathon"
+						style="display: none">
+					</a>
+				</div>
+			</div>
+
+			<div id="timeline-page" class="content">
+				<section class="cd-horizontal-timeline">
+					<div class="timeline">
+						<div class="events-wrapper">
+							<div class="events">
+								<ol>
+									<li><a href="#0" data-date="16/01/2014" class="selected">2007</a></li>
+									<li><a href="#0" data-date="02/02/2014">2011</a></li>
+									<li><a href="#0" data-date="20/02/2014">2014</a></li>
+									<li><a href="#0" data-date="30/02/2014">2015</a></li>
+									<li><a href="#0" data-date="10/03/2014">2016</a></li>
+								</ol>
+
+								<span class="filling-line" aria-hidden="true"></span>
+							</div>
+							<!-- .events -->
+						</div>
+						<!-- .events-wrapper -->
+
+						<!-- <ul class="cd-timeline-navigation">
+							<li><a href="#0" class="prev inactive">Prev</a></li>
+							<li><a href="#0" class="next">Next</a></li>
+						</ul> -->
+						<!-- .cd-timeline-navigation -->
+					</div>
+					<!-- .timeline -->
+
+					<div class="events-content">
+						<ol>
+							<li class="selected" data-date="16/01/2014">
+							<table>
+								<tr><td><h2>St. Peters’ College</h2><em>May 16th, 2005</em><p>Schooling is always the most exciting period of one's life. On the same lines, I throughly enjoyed my school days and still miss them. I completed my 10th Standard Schooling from St. Peter's
+									College, Agra which is one of the top schooling colleges in India.</p></td><td><a href="http://www.stpetersagra.org/" target="_blank"><img class="timeline-img" alt="St Pater's College" src="img/Peterlogo.jpeg" height="80" width="80"></a></td></tr>
+								
+							<tr><td><h2>Ess Ess Convent College</h2> 
+								<em>May 28th, 2007</em>
+								<p>I completed my 12th Standard Schooling from Ess Ess Convent
+									College, Agra and joined Jaypee University Of Engineering &
+									Technology, Guna (India) to pursue my Bachelor's degree in Computer Science.</p></td><td></td></tr>	
+								</table>
+							</li>
+
+							<li data-date="02/02/2014">
+							<table><tr><td><h2>Jaypee University of Engineering & Technology</h2> <em>July
+									20th, 2011</em>
+								<p>In college, I felt a better sense of satisfaction following my passion for Technology. 
+								This was the first time i came out of my Home Town - Agra and stayed in College campus - Guna. This experience helped me gain confidence and made me more mature to 
+								take decisions for betterment of my career. My family really supported me in every step of my life. 
+								These four years not only taught me about Computer Science but helped me identity the real me. With that said, I Graduated from Jaypee University Of Engineering &
+									Technology, Guna (India) and got selected for a pilot training program by Infosys in my 8th Semester itself.</p></td><td><a href="http://www.juet.ac.in/" target="_blank"><img class="timeline-img" alt="JUET" src="img/juetlogo.jpg" height="120" width="100"></a></td></tr>
+								<tr><td><h2>Infosys Internship</h2><em>Feb
+									7th, 2011</em>
+								<p>Internship at Infosys is one hell of an adventurous ride. You will like it only when it gets over and i seriously loved it. 
+								I joined Infosys,Pune after successfully completing my Internship.</p></td><td><a href="https://www.infosys.com/" target="_blank"><img class="timeline-img" alt="Infosys" src="img/infylogo.jpg" height="120" width="100"></a></td></tr>
+								</table>
+							</li>
+
+							<li data-date="20/02/2014">
+								<table><tr><td><h2>Client - PricewaterhouseCoopers</h2> <em>Aug
+									1st, 2011 To May 12th, 2014</em>
+								<p>I worked for PwC for approximately three years from Offshore location, India. We developed various Enterprise Mobile and Web applications like OutOfOffice, OfficeLocator, MobileTime, etc for different platforms like IOS, Android and Desktop. I laid my hands on various Technology stacks like
+								 REST based web services for Business Layer, presentation layer coding in JQUERY, Javascript and integration with different backends like SAP, Lotus Notes, Cisco, etc. <br><br> Please go to Experience & Resume tab for more detailed information on projects i have done for PwC</p></td><td><a href="http://www.pwc.com/" target="_blank"><img class="timeline-img" alt="JUET" src="img/pwclogo.jpg" height="120" width="100"></a></td></tr>
+								</table>
+							</li>
+
+							<li data-date="30/02/2014">
+								<table><tr><td><h2>Client - Cox Communications</h2><em>May
+									13th, 2014 To Sept 12th, 2015</em>
+								<p>I worked for Cox Communications for more than a year from Onsite location, Atlanta, GA-USA. We created a provisioning platform where Cox Customers can also opt for Home and Business Security features. 
+								We integrated the provisioning platform with iControl systems (backend).</p></td><td><a href="http://www.cox.com/" target="_blank"><img class="timeline-img" alt="Cox" src="img/coxlogo.png" height="80" width="100"></a></td></tr>
+								<tr><td><h2>1st Prize, Hackathon - Atlanta</h2><em>Sept, 2014</em>
+								<p>We created a mobile Carpool app as a solution for infosys employees. We added a security feature in the application which gave us the winning edge in the competition. 
+								We implemented a new authentication mechanism that used employee's Infosys-id and corporate email-id which will help only employees to use the Carpool service. </p></td><td><a href="http://www.infosys.com/" target="_blank"><img class="timeline-img" alt="Hackathon-infosys" src="img/infosyslogo.jpg" height="80" width="120"></a></td></tr>
+								</table>
+							</li>
+
+							<li data-date="10/03/2014">
+								<table><tr><td><h2>American Express</h2><em>Sept 14th, 2015
+									To Current..</em>
+								<p>Currently, we are working on a project which help Amex to create a 360 Customer view establishing consumer and commercial sphere of influence. 
+								We have also delivered a solution to Amex which searches a particular node in a 10 million record tree using BK Tree Algorithm in milliseconds. </p></td><td><a href="http://www.americanexpress.com/" target="_blank"><img class="timeline-img" alt="Amex" src="img/Amexlogo.jpg" height="80" width="120"></a></td></tr>
+								<tr><td><h2>3st Prize, GrothHack - Florida</h2><em>Sept, 2014</em>
+								<p>We created a smart card solution for American Express which can store multiple vendor cards like discover, chase, capital one, etc into it. 
+								This smart card can be used as a single universal card by users to make transactions. This smart card will also apt Amex to monitor its customers and push targeted promotions.</p></td><td><a href="#"><img class="timeline-img" alt="Hackathon-infosys" src="img/intellify.png" height="80" width="120"></a></td></tr>
+								</table>
+							</li>
+						</ol>
+					</div>
+					<!-- .events-content -->
+				</section>
+			</div>
+
+			<div id="resume-page" class="content">
+			<div id="main-accordian">
+
+<button class="accordion">Section 1</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 2</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 3</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        this.nextElementSibling.classList.toggle("show");
+  }
+}
+</script>
+			</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		jQuery(document).ready(function() {
+
+			jQuery("#gallery").unitegallery({
+				tile_border_color : "#7a7a7a",
+				tile_outline_color : "#8B8B8B",
+				tile_enable_shadow : true,
+				tile_shadow_color : "#8B8B8B",
+				tile_overlay_opacity : 0.3,
+				tile_image_effect_type : "sepia",
+				tile_image_effect_reverse : true,
+				tile_enable_textpanel : true,
+				lightbox_textpanel_title_color : "e5e5e5",
+				tiles_col_width : 230,
+				tiles_space_between_cols : 20
+			});
+
+		});
+	</script>
+
+	<script type="text/javascript">
+		// just querying the DOM...like a boss!
+		var links = document.querySelectorAll(".itemLinks");
+		var wrapper = document.querySelector("#wrapper");
+
+		// the activeLink provides a pointer to the currently displayed item
+		var activeLink = 0;
+
+		// setup the event listeners
+		for (var i = 0; i < links.length; i++) {
+			var link = links[i];
+			link.addEventListener('click', setClickedItem, false);
+
+			// identify the item for the activeLink
+			link.itemID = i;
+		}
+
+		// set first item as active
+		links[activeLink].classList.add("active");
+		links[activeLink].style.fontWeight = "Bolder";
+		links[activeLink].style.color = "#3a589b";
+		
+		function setClickedItem(e) {
+			removeActiveLinks();
+
+			var clickedLink = e.target;
+			activeLink = clickedLink.itemID;
+			links[activeLink].style.fontWeight = "Bolder";
+			links[activeLink].style.color = "#3a589b";
+			
+			changePosition(clickedLink);
+		}
+
+		function removeActiveLinks() {
+			for (var i = 0; i < links.length; i++) {
+				links[i].classList.remove("active");
+				links[i].style.fontWeight = "normal";
+				links[i].style.color = "black";
+			}
+		}
+
+		// Handle changing the slider position as well as ensure
+		// the correct link is highlighted as being active
+		function changePosition(link) {
+			var position = link.getAttribute("data-pos");
+
+			var translateValue = "translate3d(0px, " + position + ", 0)";
+			wrapper.style[transformProperty] = translateValue;
+
+			link.classList.add("active");
+		}
+
+		//
+		// Dealing with Transforms
+		//
+		var transforms = [ "transform", "msTransform", "webkitTransform",
+				"mozTransform", "oTransform" ];
+
+		var transformProperty = getSupportedPropertyName(transforms);
+
+		// vendor prefix management
+		function getSupportedPropertyName(properties) {
+			for (var i = 0; i < properties.length; i++) {
+				if (typeof document.body.style[properties[i]] != "undefined") {
+					return properties[i];
+				}
+			}
+			return null;
+		}
+	</script>
+	<!-- <li>
+ <a href="#demo">Demo</a>
+<ul class="submenu">
+<li><a href="#">Images + zoom icon</a></li>
+<li><a href="#">Images + captions (title only)</a></li>
+<li><a href="#">Images + captions (title and subtitle)</a></li>
+<li><a href="#">Images + captions + social i#gallery-with-image-effects.html">Image effects</a></li>
+<li><a href="#">Video</a></li>
+<li><a href="#">Full width</a></li>
+<li><a href="#">Filters</a></li>
+<li><a href="#">Infinite scroll</a></li> </ul>
+</li>  -->
+	<script src="js/jquery.mobile.custom.min.js"></script>
+	<script src="js/main.js"></script>
+	<!-- Resource jQuery -->
+
+	<footer id="footer"> </footer>
+	<!-- <a id="copyright-tag" href="http://www.nishantmittal.com">© 2016
+		Nishant Mittal</a> -->
+
+</body>
+</html>
